@@ -87,7 +87,12 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-
+var totalMonths = 0;
+var totalProfitLosses = 0;
+var averageChange = 0;
+var greatestIncrease = 0;
+var greatestDecrease = 0;
+var totalChange = 0;
 
 
 console.log('Financial Analysis')

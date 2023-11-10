@@ -94,9 +94,14 @@ var greatestIncrease = 0;
 var greatestDecrease = 0;
 var totalChange = 0;
 
+// The total number of months included in the dataset.
+var totalMonths = finances.length;
+
+
+
 
 console.log('Financial Analysis')
-console.log('Total Months: 86')
+console.log("Total number of months: " + totalMonths);
 console.log('Total: $38382578')
 console.log('Average Change: -2315.12')
 console.log('Greatest Increase in Profits/Losses: Feb-2012 ($1926159)')

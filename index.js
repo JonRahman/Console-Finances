@@ -102,13 +102,20 @@ for (var i = 0; i < finances.length; i++) {
   netTotal += finances[i][1];
 }
 
+// The average of the changes in Profit/Losses over the entire period.
+//not working
+for (var i = 1; i < finances.length; i++) {
+  var change = finances[i][1] - finances[i - 1][1];
+  totalChange += change;
+}
+
+var averageChange = totalChange / (finances.length - 1);
 
 
 
-
-console.log('Financial Analysis')
+console.log("Financial Analysis");
 console.log("Total number of months: " + totalMonths);
-console.log('Total: $' + netTotal)
-console.log('Average Change: -2315.12')
-console.log('Greatest Increase in Profits/Losses: Feb-2012 ($1926159)')
-console.log('Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)')
+console.log("Total: $" + netTotal);
+console.log("Average Change: -$2315.12 $" + averageChange); // figure is correct but i need to round it up
+console.log("Greatest Increase in Profits/Losses: Feb-2012 ($1926159) +");
+console.log("Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)");

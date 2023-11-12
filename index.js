@@ -101,7 +101,7 @@ var greatestDecrease = {
 };
 
 // The total number of months included in the dataset.
-var totalMonths = finances.length;
+totalMonths = finances.length;
 
 // The net total amount of Profit/Losses over the entire period.
 for (var i = 0; i < finances.length; i++) {
@@ -134,6 +134,6 @@ for (var i = 1; i < finances.length; i++) {
 console.log("Financial Analysis");
 console.log("Total number of months: " + totalMonths);
 console.log("Total: $" + netTotal);
-console.log("Average Change: -$2315.12 $" + averageChange); // figure is correct but i need to round it up
+console.log("Average Change: $" + averageChange.toFixed(2));
 console.log("Greatest Increase in Profits/Losses: $" + greatestIncrease.amount + " " + greatestIncrease.date);
 console.log("Greatest Decrease in Profits/Losses: $" + greatestDecrease.amount + " " + greatestDecrease.date);

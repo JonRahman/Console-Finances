@@ -90,9 +90,15 @@ var finances = [
 var totalMonths = 0;
 var netTotal = 0;
 var averageChange = 0;
-var greatestIncrease = 0;
-var greatestDecrease = 0;
 var totalChange = 0;
+var greatestIncrease = {
+  date: "",
+  amount: 0
+};
+var greatestDecrease = {
+  date: "",
+  amount: 0
+};
 
 // The total number of months included in the dataset.
 var totalMonths = finances.length;
@@ -103,7 +109,6 @@ for (var i = 0; i < finances.length; i++) {
 }
 
 // The average of the changes in Profit/Losses over the entire period.
-//not working
 for (var i = 1; i < finances.length; i++) {
   var change = finances[i][1] - finances[i - 1][1];
   totalChange += change;
@@ -111,11 +116,24 @@ for (var i = 1; i < finances.length; i++) {
 
 var averageChange = totalChange / (finances.length - 1);
 
+// The greatest increase in Profit/Losses (date and amount) over the entire period.
+// The greatest decrease in Profit/Losses (date and amount) over the entire period.
+for (var i = 1; i < finances.length; i++) {
+  var change = finances[i][1] - finances[i - 1][1];
+  
+  if (change > greatestIncrease.amount) {
+    greatestIncrease.date = finances[i][0];
+    greatestIncrease.amount = change;
+  } else if (change < greatestDecrease.amount) {
+    greatestDecrease.date = finances[i][0];
+    greatestDecrease.amount = change;
+  }
+}
 
 
 console.log("Financial Analysis");
 console.log("Total number of months: " + totalMonths);
 console.log("Total: $" + netTotal);
 console.log("Average Change: -$2315.12 $" + averageChange); // figure is correct but i need to round it up
-console.log("Greatest Increase in Profits/Losses: Feb-2012 ($1926159) +");
-console.log("Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)");
+console.log("Greatest Increase in Profits/Losses: $" + greatestIncrease.amount + " " + greatestIncrease.date);
+console.log("Greatest Decrease in Profits/Losses: $" + greatestDecrease.amount + " " + greatestDecrease.date);

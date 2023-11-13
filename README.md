@@ -12,5 +12,7 @@ This JavaScript program analyses a financial dataset provided in the `index.js` 
 
 
 ## Screenshot
+![ScreenshotCH4](https://github.com/JonRahman/Console-Finances/assets/145556007/63d6a5ed-3466-4a70-8d3e-8c6607f46ca9)
+
 
 ## Links

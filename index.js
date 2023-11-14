@@ -130,6 +130,7 @@ for (var i = 1; i < finances.length; i++) {
   }
 }
 
+// console.log all statements.
 console.log("Financial Analysis");
 console.log("Total number of months: " + totalMonths + ", Total: $" + netTotal + ", Average Change: $" + averageChange.toFixed(2));
 console.log("Greatest Increase in Profits/Losses: $" + greatestIncrease.amount + " " + greatestIncrease.date + ", & Greatest Decrease in Profits/Losses: $" + greatestDecrease.amount + " " + greatestDecrease.date);

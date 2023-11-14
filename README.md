@@ -16,3 +16,6 @@ This JavaScript program analyses a financial dataset provided in the `index.js` 
 
 
 ## Links
+1 - https://jonrahman.github.io/Console-Finances/
+
+2 - https://github.com/JonRahman/Console-Finances
